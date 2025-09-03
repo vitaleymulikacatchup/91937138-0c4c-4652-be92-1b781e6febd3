@@ -62,9 +62,9 @@ export default function Home() {
           title="Tokenomics Overview"
           description="Understanding the distribution and metrics of MEME Coin"
           kpiItems={[
-            { value: "1M", description: "Total Supply", longDescription: "Total coins that will ever be minted.", icon: { type: 'lucide-react', icon: 'Coin' } },
-            { value: "500K", description: "Liquidity", longDescription: "Available liquidity for trading.", icon: { type: 'lucide-react', icon: 'DollarSign' } },
-            { value: "100K", description: "Market Cap", longDescription: "Current market capitalization.", icon: { type: 'lucide-react', icon: 'BarChart' } },
+            { value: "1M", description: "Total Supply", longDescription: "Total coins that will ever be minted.", icon: Coin },
+            { value: "500K", description: "Liquidity", longDescription: "Available liquidity for trading.", icon: DollarSign },
+            { value: "100K", description: "Market Cap", longDescription: "Current market capitalization.", icon: BarChart },
           ]}
         />
       </div>
