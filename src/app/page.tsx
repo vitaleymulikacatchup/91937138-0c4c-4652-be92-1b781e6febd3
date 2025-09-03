@@ -6,6 +6,7 @@ import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';
 import HowToBuy3D from '@/components/sections/layouts/howtobuy/3DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import FooterLogo from '@/components/footer/FooterLogo';
+import { DollarSign, BarChart } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -17,15 +18,6 @@ export default function Home() {
         rightButtonText="Contact"
         onLeftButtonClick={() => {}}
         onRightButtonClick={() => {}}
-        className=""
-        containerClassName=""
-        logoClassName=""
-        buttonClassName=""
-        buttonContentClassName=""
-        buttonBgColor=""
-        buttonHoverBgColor=""
-        buttonTextColor=""
-        buttonHoverTextColor=""
       />
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <SplitHero
@@ -62,7 +54,7 @@ export default function Home() {
           title="Tokenomics Overview"
           description="Understanding the distribution and metrics of MEME Coin"
           kpiItems={[
-            { value: "1M", description: "Total Supply", longDescription: "Total coins that will ever be minted.", icon: Coin },
+            { value: "1M", description: "Total Supply", longDescription: "Total coins that will ever be minted.", icon: DollarSign },
             { value: "500K", description: "Liquidity", longDescription: "Available liquidity for trading.", icon: DollarSign },
             { value: "100K", description: "Market Cap", longDescription: "Current market capitalization.", icon: BarChart },
           ]}
@@ -73,8 +65,6 @@ export default function Home() {
           logoSrc="/images/logo.svg"
           logoAlt="Meme Coin"
           logoText="Meme Coin"
-          className=""
-          svgClassName=""
         />
       </div>
     </SiteThemeProvider>
