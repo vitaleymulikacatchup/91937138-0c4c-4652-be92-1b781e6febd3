@@ -1,9 +1,9 @@
 "use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
-import NavbarBase from '@/components/navigation/NavbarBase';
+import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
 import SplitHero from '@/components/sections/layouts/hero/SplitHero';
-import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';
 import HowToBuy3D from '@/components/sections/layouts/howtobuy/3DHTB';
+import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import FooterLogo from '@/components/footer/FooterLogo';
 import { DollarSign, BarChart } from 'lucide-react';
@@ -11,13 +11,13 @@ import { DollarSign, BarChart } from 'lucide-react';
 export default function Home() {
   return (
     <SiteThemeProvider theme={{ styleVariant: "funAndTrendy", colorTemplate: 2, textAnimation: "slide" }}>
-      <NavbarBase
+      <NavbarLayoutFloatingOverlay
+        navItems={[{ name: 'Meme Coin', id: 'logo' }, { name: 'Menu', id: 'menu' }, { name: 'Contact', id: 'contact' }]}
         logoSrc="/images/logo.svg"
-        logoAlt="Meme Coin"
-        leftButtonText="Menu"
-        rightButtonText="Contact"
-        onLeftButtonClick={() => {}}
-        onRightButtonClick={() => {}}
+        logoWidth={100}
+        logoHeight={50}
+        buttonText="Join Now"
+        onButtonClick={() => {}}
       />
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <SplitHero
