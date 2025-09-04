@@ -21,7 +21,7 @@ export default function Home() {
       />
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <SplitHero
-          title="Welcome to MEME Coin"
+          title="Wow I changed text"
           subtitle="The fun way to invest in crypto"
           primaryButtonText="Get Started"
           secondaryButtonText="Learn More"
