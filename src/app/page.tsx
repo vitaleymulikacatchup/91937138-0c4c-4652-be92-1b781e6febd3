@@ -29,16 +29,6 @@ export default function Home() {
           onSecondaryButtonClick={() => {}}
         />
       </div>
-      <div id="about" data-section="about" className="scroll-mt-24">
-        <SocialsAbout
-          title="Join the MEME Coin Community"
-          descriptions={[
-            "Follow us on social media for updates!",
-            "Participate in community discussions and events.",
-            "Engage with like-minded individuals who love memes!"
-          ]}
-        />
-      </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
         <HowToBuy3D
           title="How to Buy MEME Coin"
@@ -46,6 +36,16 @@ export default function Home() {
             { title: "Step 1", description: "Set up your wallet", image: "/images/placeholder1.avif", position: "left", isCenter: false },
             { title: "Step 2", description: "Purchase MEME Coin", image: "/images/placeholder2.avif", position: "center", isCenter: true },
             { title: "Step 3", description: "Enjoy your memes!", image: "/images/placeholder3.avif", position: "right", isCenter: false },
+          ]}
+        />
+      </div>
+      <div id="about" data-section="about" className="scroll-mt-24">
+        <SocialsAbout
+          title="Join the MEME Coin Community"
+          descriptions={[
+            "Follow us on social media for updates!",
+            "Participate in community discussions and events.",
+            "Engage with like-minded individuals who love memes!"
           ]}
         />
       </div>
