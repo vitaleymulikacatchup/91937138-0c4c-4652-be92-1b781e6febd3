@@ -10,7 +10,7 @@ import { DollarSign, BarChart } from 'lucide-react';
 
 export default function Home() {
   return (
-    <SiteThemeProvider theme={{ styleVariant: "futuristic", colorTemplate: 2, textAnimation: "slide" }}>
+    <SiteThemeProvider theme={{ styleVariant: "futuristic_premium", colorTemplate: 2, textAnimation: "slide" }}>
       <NavbarBase
         logoSrc="/images/logo.svg"
         logoAlt="Meme Coin"
