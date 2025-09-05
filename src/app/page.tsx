@@ -27,7 +27,6 @@ export default function Home() {
           secondaryButtonText="Learn More"
           onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
-          className="bg-cream"
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
