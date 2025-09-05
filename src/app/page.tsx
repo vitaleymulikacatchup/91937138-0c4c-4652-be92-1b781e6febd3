@@ -19,7 +19,7 @@ export default function Home() {
         buttonText="Join Now"
         onButtonClick={() => {}}
       />
-      <div id="hero" data-section="hero" className="scroll-mt-24">
+      <div id="hero" data-section="hero" className="scroll-mt-24 bg-cream">
         <SplitHero
           title="Wow I changed text"
           subtitle="My new subtitle"
