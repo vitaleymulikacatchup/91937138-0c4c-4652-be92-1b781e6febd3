@@ -1,7 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
 
-const SplitHero = ({ title, subtitle, primaryButtonText, secondaryButtonText, onPrimaryButtonClick, onSecondaryButtonClick }) => {
+interface SplitHeroProps {
+  title: string;
+  subtitle: string;
+  primaryButtonText: string;
+  secondaryButtonText: string;
+  onPrimaryButtonClick: () => void;
+  onSecondaryButtonClick: () => void;
+}
+
+const SplitHero: React.FC<SplitHeroProps> = ({ title, subtitle, primaryButtonText, secondaryButtonText, onPrimaryButtonClick, onSecondaryButtonClick }) => {
   return (
     <div className="flex justify-between items-center">
       <div className="flex-1">
@@ -11,7 +19,7 @@ const SplitHero = ({ title, subtitle, primaryButtonText, secondaryButtonText, on
         <button onClick={onSecondaryButtonClick}>{secondaryButtonText}</button>
       </div>
       <div className="flex-1">
-        <Image src="/images/placeholder4.avif" alt="Visual representation" width={500} height={500} />
+        {/* Media/Image component can go here */}
       </div>
     </div>
   );
