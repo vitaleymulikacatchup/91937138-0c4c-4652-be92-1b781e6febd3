@@ -16,7 +16,7 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "MEME Coin Landing",
-  description: "Explain the memecoin concept, show how to buy, and present tokenomics in a fun, casual single-page layout.",
+  description: "Explain the memecoin concept, show how to buy, and present tokenomics in a fun, casual single-page layout.";
 };
 
 export default function RootLayout({
