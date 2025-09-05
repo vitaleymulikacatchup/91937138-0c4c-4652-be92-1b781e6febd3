@@ -23,8 +23,8 @@ export default function Home() {
         <SplitHero
           title="Wow I changed text"
           subtitle="The fun way to invest in crypto"
-          primaryButtonText=""
-          secondaryButtonText=""
+          primaryButtonText="Get Started"
+          secondaryButtonText="Learn More"
           onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
         />
