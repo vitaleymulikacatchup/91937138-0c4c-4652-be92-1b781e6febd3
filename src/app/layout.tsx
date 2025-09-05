@@ -1,19 +1,31 @@
-import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
-import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
+import type { Metadata } from 'next';
+import { Inter_Tight, Playfair_Display } from 'next/font/google';
+import './globals.css';
 
-export default function RootLayout({ children }) {
+const interTight = Inter_Tight({
+  variable: '--font-inter-tight',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
+
+export const metadata: Metadata = {
+  title: 'MEME Coin Landing',
+  description: 'Explain the memecoin concept, show how to buy, and present tokenomics in a fun, casual single-page layout.',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body>
-        <SiteThemeProvider>
-          <NavbarLayoutFloatingOverlay 
-            navItems={[{ name: 'Meme Coin', id: 'logo' }, { name: 'Menu', id: 'menu' }, { name: 'Contact', id: 'contact' }]}
-            logoSrc="/images/logo.svg"
-            logoWidth={100}
-            logoHeight={50}
-          />
-          {children}
-        </SiteThemeProvider>
+      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased`}> 
+        {children}
       </body>
     </html>
   );

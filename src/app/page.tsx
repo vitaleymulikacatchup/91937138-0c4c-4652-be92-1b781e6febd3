@@ -1,4 +1,4 @@
-"use client";
+use client;
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
 import SplitHero from '@/components/sections/layouts/hero/SplitHero';
@@ -10,13 +10,21 @@ import { DollarSign, BarChart } from 'lucide-react';
 
 export default function Home() {
   return (
-    <SiteThemeProvider theme={{ styleVariant: "funAndTrendy", colorTemplate: 2, textAnimation: "slide" }}>
+    <SiteThemeProvider theme={{ styleVariant: 'funAndTrendy', colorTemplate: 2, textAnimation: 'slide' }}>
+      <NavbarLayoutFloatingOverlay
+        navItems={[{ name: 'Meme Coin', id: 'logo' }, { name: 'Menu', id: 'menu' }, { name: 'Contact', id: 'contact' }]}
+        logoSrc="/images/logo.svg"
+        logoWidth={100}
+        logoHeight={50}
+        buttonText="Join Now"
+        onButtonClick={() => {}}
+      />
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <SplitHero
           title="Wow I changed text"
           subtitle="The fun way to invest in crypto"
-          primaryButtonText=""
-          secondaryButtonText=""
+          primaryButtonText="Get Started"
+          secondaryButtonText="Learn More"
           onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
         />
@@ -25,9 +33,9 @@ export default function Home() {
         <HowToBuy3D
           title="How to Buy MEME Coin"
           steps={[
-            { title: "Step 1", description: "Set up your wallet", image: "/images/placeholder1.avif", position: "left", isCenter: false },
-            { title: "Step 2", description: "Purchase MEME Coin", image: "/images/placeholder2.avif", position: "center", isCenter: true },
-            { title: "Step 3", description: "Enjoy your memes!", image: "/images/placeholder3.avif", position: "right", isCenter: false },
+            { title: 'Step 1', description: 'Set up your wallet', image: '/images/placeholder1.avif', position: 'left', isCenter: false },
+            { title: 'Step 2', description: 'Purchase MEME Coin', image: '/images/placeholder2.avif', position: 'center', isCenter: true },
+            { title: 'Step 3', description: 'Enjoy your memes!', image: '/images/placeholder3.avif', position: 'right', isCenter: false },
           ]}
         />
       </div>
@@ -35,9 +43,9 @@ export default function Home() {
         <SocialsAbout
           title="Join the MEME Coin Community"
           descriptions={[
-            "Follow us on social media for updates!",
-            "Participate in community discussions and events.",
-            "Engage with like-minded individuals who love memes!"
+            'Follow us on social media for updates!',
+            'Participate in community discussions and events.',
+            'Engage with like-minded individuals who love memes!',
           ]}
         />
       </div>
@@ -46,9 +54,9 @@ export default function Home() {
           title="Tokenomics Overview"
           description="Understanding the distribution and metrics of MEME Coin"
           kpiItems={[
-            { value: "1M", description: "Total Supply", longDescription: "Total coins that will ever be minted.", icon: DollarSign },
-            { value: "500K", description: "Liquidity", longDescription: "Available liquidity for trading.", icon: DollarSign },
-            { value: "100K", description: "Market Cap", longDescription: "Current market capitalization.", icon: BarChart },
+            { value: '1M', description: 'Total Supply', longDescription: 'Total coins that will ever be minted.', icon: DollarSign },
+            { value: '500K', description: 'Liquidity', longDescription: 'Available liquidity for trading.', icon: DollarSign },
+            { value: '100K', description: 'Market Cap', longDescription: 'Current market capitalization.', icon: BarChart },
           ]}
         />
       </div>
