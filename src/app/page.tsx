@@ -25,12 +25,10 @@ export default function Home() {
         <SplitHero
           title="Wow I changed text"
           subtitle="My new subtitle"
-          primaryButtonText={
-            <ButtonIconArrow text="Get Started" onClick={() => {}} />
-          }
-          secondaryButtonText={
-            <ButtonIconRotate text="Learn More" onClick={() => {}} />
-          }
+          primaryButtonText="Get Started"
+          secondaryButtonText="Learn More"
+          onPrimaryButtonClick={() => {}}
+          onSecondaryButtonClick={() => {}}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
