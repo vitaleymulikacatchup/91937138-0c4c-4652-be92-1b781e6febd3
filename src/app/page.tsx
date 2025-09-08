@@ -1,4 +1,4 @@
-"use client";
+use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
 import SplitHero from '@/components/sections/layouts/hero/SplitHero';
@@ -25,10 +25,8 @@ export default function Home() {
         <SplitHero
           title="Wow I changed text"
           subtitle="The fun way to invest in crypto"
-          primaryButtonText="Get Started"
-          secondaryButtonText="Learn More"
-          onPrimaryButtonClick={() => {}}
-          onSecondaryButtonClick={() => {}}
+          primaryButtonIcon={ButtonIconArrow}
+          secondaryButtonIcon={ButtonIconRotate}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">

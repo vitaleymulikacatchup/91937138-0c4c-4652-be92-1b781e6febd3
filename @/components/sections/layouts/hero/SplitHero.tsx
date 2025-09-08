@@ -1,41 +1,28 @@
 import type { LucideIcon } from 'lucide-react';
-import React from 'react';
 
-interface SplitHeroProps {
+type SplitHeroProps = {
   title: string;
   subtitle: string;
-  primaryButtonText: string;
-  secondaryButtonText: string;
-  onPrimaryButtonClick?: () => void;
-  onSecondaryButtonClick?: () => void;
-  // Additional props for image support
-  primaryImage?: string;
-  secondaryImage?: string;
-}
+  primaryButtonIcon?: LucideIcon;
+  secondaryButtonIcon?: LucideIcon;
+};
 
-const SplitHero: React.FC<SplitHeroProps> = ({
-  title,
-  subtitle,
-  primaryButtonText,
-  secondaryButtonText,
-  onPrimaryButtonClick,
-  onSecondaryButtonClick,
-}) => {
+export default function SplitHero({ title, subtitle, primaryButtonIcon: PrimaryIcon, secondaryButtonIcon: SecondaryIcon }: SplitHeroProps) {
   return (
-    <div className="split-hero">
-      <div className="text-section">
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
-        <button onClick={onPrimaryButtonClick}>{primaryButtonText}</button>
-        <button onClick={onSecondaryButtonClick}>{secondaryButtonText}</button>
+    <div className="flex p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">  
+      <div className="flex-1">
+        <h1 className="text-4xl font-bold text-white">{title}</h1>
+        <p className="text-lg text-gray-200">{subtitle}</p>
+        <button className="icon-button">
+          {PrimaryIcon ? <PrimaryIcon className="mr-2" /> : null}Get Started
+        </button>
+        <button className="icon-button">
+          {SecondaryIcon ? <SecondaryIcon className="mr-2" /> : null}Learn More
+        </button>
       </div>
-      <div className="image-section">
-        {/* Implement your image logic here */}
-        <img src="/images/placeholder1.avif" alt="Primary Visual" />
-        <img src="/images/placeholder2.avif" alt="Secondary Visual" />
+      <div className="flex-1 text-right">
+        <img src="/images/placeholder1.avif" alt="Illustration" className="rounded-lg" />
       </div>
     </div>
   );
-};
-
-export default SplitHero;
+}
