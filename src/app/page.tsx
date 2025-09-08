@@ -21,14 +21,18 @@ export default function Home() {
         buttonText="Join Now"
         onButtonClick={() => {}}
       />
-      <div id="hero" data-section="hero" className="scroll-mt-24 bg-cream">
+      <div id="hero" data-section="hero" className="scroll-mt-24">
         <SplitHero
           title="Wow I changed text"
-          subtitle="My new subtitle"
+          subtitle="The fun way to invest in crypto"
           primaryButtonText="Get Started"
           secondaryButtonText="Learn More"
           onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
+          actions={[
+            { label: "Get Started", icon: ButtonIconRotate },
+            { label: "Learn More", icon: ButtonIconArrow },
+          ]}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
