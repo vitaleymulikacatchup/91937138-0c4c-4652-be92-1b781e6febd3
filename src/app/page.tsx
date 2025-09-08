@@ -29,10 +29,6 @@ export default function Home() {
           secondaryButtonText="Learn More"
           onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
-          actions={[
-            { label: "Get Started", icon: ButtonIconRotate },
-            { label: "Learn More", icon: ButtonIconArrow },
-          ]}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
