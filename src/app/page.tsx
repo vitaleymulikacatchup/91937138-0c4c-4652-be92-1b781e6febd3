@@ -7,6 +7,8 @@ import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import FooterLogo from '@/components/footer/FooterLogo';
 import { DollarSign, BarChart } from 'lucide-react';
+import ButtonIconArrow from '@/components/buttons/ButtonIconArrow';
+import ButtonIconRotate from '@/components/buttons/ButtonIconRotate/ButtonIconRotate';
 
 export default function Home() {
   return (
@@ -23,10 +25,12 @@ export default function Home() {
         <SplitHero
           title="Wow I changed text"
           subtitle="My new subtitle"
-          primaryButtonText="Get Started"
-          secondaryButtonText="Learn More"
-          onPrimaryButtonClick={() => {}}
-          onSecondaryButtonClick={() => {}}
+          primaryButtonText={
+            <ButtonIconArrow text="Get Started" onClick={() => {}} />
+          }
+          secondaryButtonText={
+            <ButtonIconRotate text="Learn More" onClick={() => {}} />
+          }
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
