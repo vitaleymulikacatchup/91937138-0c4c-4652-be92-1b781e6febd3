@@ -27,7 +27,7 @@ export default function Home() {
           subtitle="The fun way to invest in crypto"
           primaryButtonText=""
           secondaryButtonText=""
-          onPrimaryButtonClick={() => {} }
+          onPrimaryButtonClick={() => {}}
           onSecondaryButtonClick={() => {}}
           actions={[
             { label: 'Get Started', icon: ButtonIconArrow },
